@@ -1,0 +1,29 @@
+[
+  {
+    "id": "dfghf_1234",
+    "volumeInfo": {
+      "title": "To kill a Mockingbird",
+      "authors": ["Harper Lee"],
+      "description": "This is a description ..."
+    },
+    "price": 9.99
+  },
+  {
+    "id": "dfghf_2342",
+    "volumeInfo": {
+      "title": "Pride and Prejudice",
+      "authors": null,
+      "description": "This is a description ..."
+    },
+    "price": null
+  },
+  {
+    "id": "dfghf_4342",
+    "volumeInfo": {
+      "title": "Pride and Prejudice 2",
+      "authors": ["Jane Austen", "Alice Houghton"],
+      "description": null
+    },
+    "price": 10.0
+  }
+]
