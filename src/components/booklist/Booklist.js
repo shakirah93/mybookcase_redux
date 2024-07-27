@@ -1,10 +1,13 @@
+import { useSelector } from "react-redux";
 import Book from "../book/Book";
 
-function Booklist(props) {
-  console.log("length: " + props.booksList.length);
+function Booklist() {
+  const booksList = useSelector((state) => state.booksList.books);
+
+  console.log("length: " + booksList.length);
 
   // this shows when the books.json array is empty (i.e [])
-  if (props.booksList.length === 0) {
+  if (booksList.length === 0) {
     return <p>No books yet ...</p>;
   }
 
@@ -22,7 +25,7 @@ function Booklist(props) {
       ))} */}
 
       {/* With destructing */}
-      {props.booksList.map((book) => (
+      {booksList.map((book) => (
         <Book key={book.id} bookProps={book} />
       ))}
     </div>

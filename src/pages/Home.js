@@ -1,15 +1,11 @@
 import Booklist from "../components/booklist/Booklist";
 import Search from "../components/search/Search";
 
-function Home(props) {
+function Home() {
   return (
     <>
-      <Search
-        keywordProps={props.keyProps}
-        setKeywordProps={props.setKeyProps}
-        findBooksProps={props.searchBooksProps}
-      />
-      <Booklist booksList={props.bProps} />
+      <Search />
+      <Booklist />
     </>
   );
 }

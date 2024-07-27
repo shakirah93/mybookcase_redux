@@ -8,19 +8,6 @@ import Bookcase from "./pages/Bookcase";
 import Contact from "./pages/Contact";
 
 function App() {
-  const [books, setBooks] = useState(data);
-  const [keyword, setKeyword] = useState("");
-
-  const findBooks = async (value) => {
-    const results = await fetch(
-      `https://www.googleapis.com/books/v1/volumes?q=${value}&filter=paid-ebooks&print-type=books&projection=lite`
-    ).then((res) => res.json());
-
-    if(!results.error) {
-      setBooks(results.items);
-    }
-  };
-
   return (
     <Router>
       {/* <React.Fragment> */}
@@ -36,18 +23,7 @@ function App() {
       {/* </React.Fragment> */}
 
       <Routes>
-        <Route
-          exact
-          path="/"
-          element={
-            <Home
-              bProps={books}
-              keyProps={keyword}
-              setKeyProps={setKeyword}
-              searchBooksProps={findBooks}
-            />
-          }
-        />
+        <Route exact path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/bookcase" element={<Bookcase />} />
         <Route path="/contact" element={<Contact />} />

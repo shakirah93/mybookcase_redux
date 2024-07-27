@@ -4,3 +4,5 @@ const setBooks = (data) => {
     payload: data,
   };
 };
+
+export default setBooks;
